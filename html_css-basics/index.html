@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Di-Gi</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
   <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet">
@@ -33,10 +32,13 @@
       </button>
     </div>
 
-    <h1>Мисли глобально</h1>
-    <p>Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу,
-      продажах та управленні</p>
-    <a class="btn-read-more" href="#">Детальніше</a>
+    <div class="general-content">
+      <h1>Мисли глобально</h1>
+      <hr class="hr-blue hr-main">
+      <p>Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу,
+        продажах та управленні</p>
+      <a class="btn-read-more" href="#">Детальніше</a>
+    </div>
 
     <div class="pagination">
       <img src="images/Oval%201.svg" alt="Перша сторінка">
@@ -56,9 +58,11 @@
   <section id="service">
     <div class="service__text">
       <h3>Сервіс</h3>
-      <h4>Від ідеї до незабутнього та вимірюваного результату.</h4>
-      <hr class="hr-blue">
-      <p>Інтеграція бездоганного виробництва, передових технологій та ретельного вимірювання продуктивності</p>
+      <div class="service__details">
+        <h4>Від ідеї до незабутнього та вимірюваного результату.</h4>
+          <hr class="hr-blue">
+        <p>Інтеграція бездоганного виробництва, передових технологій та ретельного вимірювання продуктивності</p>
+      </div>
     </div>
 
     <div class="service__elements">
@@ -66,7 +70,7 @@
         <img src="images/Object1.png" alt="Стратегія" width="55" height="64">
         <h6 class="elements__btn__title">Стратегія</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
@@ -74,7 +78,7 @@
         <img src="images/Object2.png" alt="Аналіз" width="65" height="64">
         <h6 class="elements__btn__title">Аналіз</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
@@ -82,7 +86,7 @@
         <img src="images/Object3.png" alt="Соц мережі" width="64" height="65">
         <h6 class="elements__btn__title">Соц мережі</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
@@ -90,7 +94,7 @@
         <img src="images/Object4.png" alt="Розвиток" width="66" height="64">
         <h6 class="elements__btn__title">Розвиток</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
@@ -98,7 +102,7 @@
         <img src="images/Object5.png" alt="Контент" width="66" height="64">
         <h6 class="elements__btn__title">Контент</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
@@ -106,7 +110,7 @@
         <img src="images/Object6.png" alt="Дизайн UX" width="58" height="64">
         <h6 class="elements__btn__title">Дизайн UX</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
@@ -114,7 +118,7 @@
         <img src="images/Object7.png" alt="Таргетована реклама" width="66" height="64">
         <h6 class="elements__btn__title">Таргетована реклама</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
@@ -122,7 +126,7 @@
         <img src="images/Object8.png" alt="Продукт" width="66" height="64">
         <h6 class="elements__btn__title">Продукт</h6>
         <div class="elements__btn__hover-text">
-          <p >Створимо унікальний та зручний дизайн</p>
+          <p>Створимо унікальний та зручний дизайн</p>
           <h6>Детальніше →</h6>
         </div>
       </a>
