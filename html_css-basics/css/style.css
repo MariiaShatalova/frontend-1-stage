@@ -529,3 +529,53 @@ h3 {
     vertical-align: bottom;
     color: var(--dark-gray);
 }
+
+#quote {
+    width: 100%;
+    height: 480px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.quote {
+    width: 48em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.quote__text {
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: var(--dark-gray);
+}
+
+.quote__text strong {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: bottom;
+    color: var(--dark-blue);
+}
+
+.quote__author {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: bottom;
+    color: var(--dark-gray);
+}
