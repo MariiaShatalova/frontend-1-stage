@@ -532,7 +532,7 @@ h3 {
 
 #quote {
     width: 100%;
-    height: 480px;
+    height: 534px;
     background: var(--white);
     display: flex;
     flex-direction: column;
@@ -578,4 +578,125 @@ h3 {
     text-align: center;
     vertical-align: bottom;
     color: var(--dark-gray);
+}
+
+footer {
+    width: 100%;
+    height: 680px;
+    background: var(--dark-blue);
+    position: relative;
+    padding-top: 40px;
+}
+
+.footer__container {
+    width: 85%;
+    height: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: space-evenly;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 60px;
+    background: url('../images/Group 2 1.svg') no-repeat center / auto 55px, var(--dark-blue);
+}
+
+.footer__contact_us {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: var(--white);
+    width: 25em;
+}
+
+.table__media {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.table__media tr {
+    height: 3em;
+}
+
+.table__media td {
+    border: 1px solid #7EBF84;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table__media td:first-child {
+    border-left: 1px solid transparent;
+}
+
+.table__media td:last-child {
+    border-right: 1px solid transparent;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacts__item {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contacts__item h6 {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+    vertical-align: bottom;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.contacts__item p,
+.contacts__item a {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0;
+    vertical-align: bottom;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.copyright {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: var(--beige);
+    padding: 1em 5em;
+}
+
+.copyright a {
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    vertical-align: bottom;
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
 }
