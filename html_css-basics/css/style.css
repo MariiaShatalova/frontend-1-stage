@@ -61,7 +61,6 @@ header {
     margin: 0;
 
     font-family: var(--title-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 96px;
     text-align: center;
@@ -78,7 +77,6 @@ header {
     width: 800px;
 
     font-family: var(--title-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
     text-align: center;
@@ -119,7 +117,6 @@ header {
     border: none;
 
     font-family: var(--main-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     text-decoration: none;
@@ -149,7 +146,6 @@ header {
 
 .promo-text h5 {
     font-family: var(--main-font);
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     color: var(--white);
@@ -158,7 +154,6 @@ header {
 .promo-text p {
     max-width: 440px;
     font-family: 'Dosis', sans-serif;
-    font-style: normal;
     font-weight: 300;
     font-size: 16px;
     color: var(--white);
@@ -172,7 +167,6 @@ header {
     border: none;
 
     font-family: var(--main-font);
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     text-decoration: none;
@@ -212,7 +206,6 @@ header {
 
 .service__text h3 {
     font-family: var(--title-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 48px;
     color: var(--dark-blue);
@@ -220,7 +213,6 @@ header {
 
 .service__text h4 {
     font-family: var(--main-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
     color: var(--dark-gray);
@@ -228,7 +220,6 @@ header {
 
 .service__text p {
     font-family: var(--main-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     color: var(--gray);
@@ -278,7 +269,6 @@ header {
 
 .elements__btn__title {
     font-family: var(--title-font);
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -290,7 +280,6 @@ header {
 
 .elements__btn__hover-text p {
     font-family: var(--main-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     text-align: center;
@@ -299,7 +288,6 @@ header {
 
 .elements__btn__hover-text h6 {
     font-family: var(--title-font);
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     text-align: center;
@@ -310,12 +298,13 @@ header {
 
 #our-projects {
     width: 100%;
-    height: 618px;
+    height: auto;
     background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 4em;
+    padding: 4em;
 }
 
 .our-projects__title {
@@ -343,7 +332,7 @@ header {
 
 .our-projects__projects {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1.5em;
 }
@@ -355,6 +344,8 @@ header {
     gap: 2em;
     transition: .5s ease;
     backface-visibility: hidden;
+    flex: 1 1 calc(25% - 1.5rem);
+    min-width: 318px;
 }
 
 .projects__item__img {
@@ -367,6 +358,9 @@ header {
 
 .projects__item__img img {
     border-radius: 2%;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .projects__item__hover-pics {
@@ -394,7 +388,6 @@ header {
     font-family: var(--title-font);
     font-weight: 700;
     font-size: 16px;
-    line-height: 100%;
     letter-spacing: 2px;
     text-align: center;
     vertical-align: bottom;
@@ -403,15 +396,21 @@ header {
 
 #team {
     width: 100%;
-    height: 580px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em 0 5em 0;
 }
 
 #team img {
     border-radius: 2%;
+    width: clamp(240px, 35%, 460px);
+    height: auto;
+    object-fit: cover;
+    flex: 0 1 auto;
 }
 
 .team__text {
@@ -420,6 +419,7 @@ header {
     align-items: flex-start;
     justify-content: center;
     gap: 3em;
+    width: auto;
 }
 
 h3 {
@@ -435,7 +435,7 @@ h3 {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    width: 506px;
+    width: 29em; /* todo до 24em на планшеті*/
     color: var(--gray);
 }
 
@@ -550,7 +550,6 @@ h3 {
 
 .quote__text {
     font-family: var(--title-font);
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
@@ -562,7 +561,6 @@ h3 {
     font-family: var(--title-font);
     font-weight: 700;
     font-size: 36px;
-    line-height: 100%;
     letter-spacing: 0;
     text-align: center;
     vertical-align: bottom;
@@ -573,7 +571,6 @@ h3 {
     font-family: var(--title-font);
     font-weight: 700;
     font-size: 24px;
-    line-height: 100%;
     letter-spacing: 2px;
     text-align: center;
     vertical-align: bottom;
@@ -700,3 +697,4 @@ footer::before {
     text-decoration: none;
     text-transform: uppercase;
 }
+
