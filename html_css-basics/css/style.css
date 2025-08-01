@@ -19,11 +19,11 @@ header {
     background-color: var(--dark-blue);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100px;
     width: 100%;
-    padding: 0 150px;
+    gap: 60%;
 }
 
 .btn-menu {
@@ -57,7 +57,7 @@ header {
 }
 
 #general h1 {
-    width: 514px;
+    width: 5em;
     margin: 0;
 
     font-family: var(--title-font);
@@ -74,13 +74,14 @@ header {
 }
 
 #general p {
-    width: 800px;
-
+    width: 30em;
     font-family: var(--title-font);
     font-weight: 400;
     font-size: 24px;
+    line-height: 26px;
     text-align: center;
     color: #FFFFFF;
+    letter-spacing: 0;
 }
 
 .content-arrows {
@@ -92,20 +93,19 @@ header {
     width: 100%;
 }
 
-.btn-forward {
+.btn-arrow {
     width: 70px;
     height: 70px;
-    background: var(--dark-blue);
     border: none;
     cursor: pointer;
 }
 
-.btn-back {
-    width: 70px;
-    height: 70px;
+.btn-arrow__forward {
+    background: var(--dark-blue);
+}
+
+.btn-arrow__back {
     background: var(--beige);
-    border: none;
-    cursor: pointer;
 }
 
 .btn-read-more {
@@ -130,12 +130,13 @@ header {
 
 #promo {
     width: 100%;
-    height: 192px;
+    height: 13.5vw;
     background: var(--dark-blue);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    gap: 10vw;
 }
 
 .promo-text {
@@ -148,14 +149,16 @@ header {
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 24px;
+    letter-spacing: 0;
     color: var(--white);
 }
 
 .promo-text p {
-    max-width: 440px;
+    width: 29em;
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
     font-size: 16px;
+    letter-spacing: 0;
     color: var(--white);
 }
 
@@ -181,9 +184,7 @@ header {
 
 #service {
     width: 100%;
-    height: 550px;
     background: var(--white);
-
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -194,6 +195,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 3em;
+    padding: 6em 0;
 }
 
 .service__details {
@@ -215,6 +218,9 @@ header {
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 0;
+    vertical-align: bottom;
     color: var(--dark-gray);
 }
 
@@ -222,12 +228,15 @@ header {
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+    vertical-align: bottom;
     color: var(--gray);
 }
 
 .hr-blue {
     border: 4px solid var(--dark-blue);
-    width: 24%;
+    width: 100px;
     margin: 0;
 }
 
@@ -264,7 +273,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 1em;
+    gap: 2em;
 }
 
 .elements__btn__title {
@@ -304,7 +313,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 4em;
-    padding: 4em;
+    padding: 5em 1em;
 }
 
 .our-projects__title {
@@ -326,7 +335,7 @@ header {
 
 .hr-white {
     border: 4px solid var(--white);
-    width: 30%;
+    width: 100px;
     margin: 0;
 }
 
@@ -344,7 +353,6 @@ header {
     gap: 2em;
     transition: .5s ease;
     backface-visibility: hidden;
-    flex: 1 1 calc(25% - 1.5rem);
     min-width: 318px;
 }
 
@@ -398,28 +406,28 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
     gap: 2em;
-    padding: 2em 0 5em 0;
+    padding: 2em 0 5em 3em;
 }
 
 #team img {
     border-radius: 2%;
     width: clamp(240px, 35%, 460px);
     height: auto;
-    object-fit: cover;
-    flex: 0 1 auto;
+    object-fit: contain;
+    max-width: 35%;
+    flex: 0 1 35%;
 }
 
 .team__text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 3em;
-    width: auto;
+    justify-content: space-between;
+    gap: 1.5em;
+    flex: 1 1 60%;
+    min-width: 0;
 }
 
 h3 {
@@ -435,25 +443,28 @@ h3 {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    width: 29em; /* todo до 24em на планшеті*/
+    max-width: 29em;
     color: var(--gray);
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 #latest-news {
     width: 100%;
-    height: 1044px;
     background: var(--beige);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 5em;
+    padding: 3em 2em;
 }
 
 .latest-news__title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 }
 
 .latest-news__news {
@@ -532,16 +543,20 @@ h3 {
 
 #quote {
     width: 100%;
-    height: 534px;
+    height: auto;
     background: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    gap: 4em;
+    padding: 4em 4em 5em;
 }
 
 .quote {
-    width: 48em;
+    width: 100%;
+    max-width: 49em;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -553,8 +568,11 @@ h3 {
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
+    letter-spacing: 0;
     text-align: center;
     color: var(--dark-gray);
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .quote__text strong {
@@ -591,7 +609,6 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2em;
     justify-content: space-evenly;
 }
 
@@ -657,7 +674,7 @@ footer::before {
 
 .contacts__item h6 {
     font-family: var(--title-font);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
     letter-spacing: 2px;
     vertical-align: bottom;
@@ -668,7 +685,7 @@ footer::before {
 .contacts__item p,
 .contacts__item a {
     font-family: var(--main-font);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0;
@@ -698,3 +715,95 @@ footer::before {
     text-transform: uppercase;
 }
 
+
+@media (max-width: 1024px) {
+    #general {
+        height: 618px;
+    }
+
+    #general h1 {
+        font-size: 84px;
+    }
+
+    #general p {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .btn-arrow {
+        width: 56px;
+        height: 56px;
+    }
+
+    .promo-text h5 {
+        font-size: 18px;
+    }
+
+    .promo-text p {
+        font-size: 14px;
+    }
+
+    #service {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3em 2em 1em;
+    }
+
+    .service__text {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+
+    .service__text p {
+        width: 65%;
+    }
+
+    .service__elements {
+        width: 100%;
+        height: 550px;
+    }
+
+    #team img {
+        max-width: 45%;
+        flex: 0 1 45%;
+    }
+
+    .latest-news__news {
+        column-count: 3;
+    }
+
+    .news__item__title h6 {
+        font-size: 18px;
+    }
+
+    .quote__text {
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0;
+    }
+
+    .quote__text strong {
+        font-size: 32px;
+        line-height: 100%;
+    }
+
+    .quote__author {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .footer__contact_us {
+        font-size: 36px;
+    }
+
+    .contacts__item h6 {
+        font-size: 18px;
+    }
+
+    .contacts__item p,
+    .contacts__item a {
+        font-size: 16px;
+    }
+}
