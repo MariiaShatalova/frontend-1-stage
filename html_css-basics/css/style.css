@@ -76,7 +76,7 @@ header {
 #general p {
     width: 30em;
     font-family: var(--title-font);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 24px;
     line-height: 26px;
     text-align: center;
@@ -156,7 +156,7 @@ header {
 .promo-text p {
     width: 29em;
     font-family: 'Dosis', sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 16px;
     letter-spacing: 0;
     color: var(--white);
@@ -409,7 +409,11 @@ header {
     align-items: stretch;
     justify-content: space-around;
     gap: 2em;
-    padding: 2em 0 5em 3em;
+    padding: 2em 1em 5em 3em;
+}
+
+.btn-between {
+    display: none;
 }
 
 #team img {
@@ -434,6 +438,7 @@ h3 {
     font-family: var(--title-font);
     font-weight: 400;
     font-size: 48px;
+    letter-spacing: 0;
     color: var(--dark-gray);
     text-transform: capitalize;
 }
@@ -443,6 +448,7 @@ h3 {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    letter-spacing: 0;
     max-width: 29em;
     color: var(--gray);
     overflow-wrap: break-word;
@@ -604,7 +610,7 @@ footer {
 }
 
 .footer__container {
-    width: 85%;
+    width: 90%;
     height: 98%;
     margin: 0 auto;
     display: flex;
@@ -631,7 +637,6 @@ footer::before {
     letter-spacing: 2px;
     text-align: left;
     color: var(--white);
-    width: 25em;
 }
 
 .table__media {
@@ -805,5 +810,91 @@ footer::before {
     .contacts__item p,
     .contacts__item a {
         font-size: 16px;
+    }
+
+    .copyright {
+        padding: 1em 1em;
+    }
+}
+
+
+@media (max-width: 770px) {
+    #general {
+        height: 465px;
+    }
+
+    #general h1 {
+        font-size: 60px;
+    }
+
+    #promo {
+        height: 178px;
+        gap: 0;
+    }
+
+    .promo-text {
+        gap: 2em;
+    }
+
+    .service__elements {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 1350px;
+    }
+
+    #team {
+        align-items: flex-start;
+        position: relative;
+        padding-bottom: 8em;
+    }
+
+    h3 {
+        font-size: 36px;
+        line-height: 38px;
+    }
+
+    #team p {
+        font-size: 16px;
+    }
+
+    .team__text {
+        position: relative;
+    }
+
+    .btn-between {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .team__text .btn-read-more {
+        display: none;
+    }
+
+    .latest-news__news {
+        column-count: 2;
+    }
+
+    #quote {
+        padding: 4em 3em 5em;
+    }
+
+    .footer__contact_us {
+        font-size: 32px;
+    }
+
+    .contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em;
+    }
+
+    .contacts__item {
+        width: 100%;
     }
 }
