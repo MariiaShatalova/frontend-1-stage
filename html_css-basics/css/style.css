@@ -343,6 +343,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 1.5em;
 }
 
@@ -353,7 +354,6 @@ header {
     gap: 2em;
     transition: .5s ease;
     backface-visibility: hidden;
-    min-width: 318px;
 }
 
 .projects__item__img {
@@ -386,6 +386,11 @@ header {
     gap: 0.7em;
     background: var(--beige);
     border-radius: 0.3em;
+}
+
+.projects__item__hover-pics img {
+    height: 32px;
+    width: auto;
 }
 
 .projects__item:hover .projects__item__hover-pics {
@@ -441,7 +446,6 @@ h3 {
     letter-spacing: 0;
     color: var(--dark-gray);
     text-transform: capitalize;
-    text-align: center;
 }
 
 #team p {
@@ -472,6 +476,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 2em;
+    text-align: center;
 }
 
 .latest-news__news {
@@ -902,6 +907,23 @@ footer::before {
 }
 
 
+@media (max-width: 692px) {
+    .projects__item h6 {
+        font-size: 20px;
+    }
+
+    .projects__item__img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .projects__item__hover-pics img {
+        height: 62px;
+        width: auto;
+    }
+}
+
+
 @media (max-width: 640px) {
     #general {
         height: 386px;
@@ -966,6 +988,12 @@ footer::before {
         padding: 2em 2em;
     }
 
+    #team img {
+        width: 80vw;
+        max-width: 80vw;
+        flex: none;
+    }
+
     .hr-blue {
         width: 88px;
     }
@@ -1008,6 +1036,15 @@ footer::before {
 }
 
 @media (max-width: 410px) {
+    header {
+        gap: 1em;
+    }
+
+    #general h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
     .promo-text p {
         width: 100%;
     }
@@ -1015,13 +1052,13 @@ footer::before {
     .latest-news__news {
         column-count: 1;
     }
+
+    .projects__item__hover-pics img {
+        height: 2em;
+    }
 }
 
 @media (max-width: 320px) {
-    header {
-        gap: 1em;
-    }
-
     #general {
         height: 194px;
     }
@@ -1083,6 +1120,10 @@ footer::before {
     .team__text h3 {
         font-size: 24px;
         line-height: 38px;
+    }
+
+    .projects__item h6 {
+        font-size: 16px;
     }
 
     .latest-news__title h3 {
@@ -1169,5 +1210,12 @@ footer::before {
         flex-direction: column;
         justify-content: center;
         gap: 1em;
+    }
+}
+
+
+@media (max-width: 230px) {
+    footer::before {
+        width: 100%;
     }
 }
