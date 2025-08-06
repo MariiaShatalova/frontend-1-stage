@@ -632,7 +632,7 @@ footer::before {
     transform: translateX(-50%);
     width: 230px;
     height: 60px;
-    background: url('../images/Group 2 1.svg') no-repeat center / auto 55px, var(--dark-blue);
+    background: url('../images/logo.svg') no-repeat center / auto 55px, var(--dark-blue);
 }
 
 .footer__contact_us {
