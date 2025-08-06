@@ -1035,7 +1035,7 @@ footer::before {
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 440px) {
     header {
         gap: 1em;
     }
@@ -1043,6 +1043,10 @@ footer::before {
     #general h1 {
         font-size: 48px;
         line-height: 48px;
+    }
+
+    .content-arrows {
+        display: none;
     }
 
     .promo-text p {
@@ -1066,10 +1070,6 @@ footer::before {
     #general h1 {
         font-size: 28px;
         line-height: 28px;
-    }
-
-    .content-arrows {
-        display: none;
     }
 
     .general-content a {
