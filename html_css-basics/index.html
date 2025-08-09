@@ -50,7 +50,7 @@
       </button>
     </div>
 
-    <div class="owl-carousel">
+    <div class="owl-carousel owl-carousel-general">
       <div class="general-content">
         <h1>Мисли глобально</h1>
         <hr class="hr-main">
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="pagination">
+    <div class="pagination-white">
       <img src="images/Oval%202.svg" alt="Перша сторінка">
       <img src="images/Oval%201.svg" alt="Друга сторінка">
       <img src="images/Oval%201.svg" alt="Третя сторінка">
@@ -314,15 +314,27 @@
 
   <section id="quote">
     <img src="images/quote.png" alt="Цитата">
-    <div class="quote">
-      <h2 class="quote__text"> Якщо треба створити або підняти імідж компанії,
-        то <strong>діджитал-маркетинг</strong> є найбільш влучним </h2>
-      <h6 class="quote__author">- Маргарита Акулич</h6>
+    <div class="owl-carousel owl-carousel-quote">
+      <div class="quote">
+        <h2 class="quote__text"> Якщо треба створити або підняти імідж компанії,
+          то <strong>діджитал-маркетинг</strong> є найбільш влучним </h2>
+        <h6 class="quote__author">- Маргарита Акулич</h6>
+      </div>
+      <div class="quote">
+        <h2 class="quote__text"> Якщо треба створити або підняти імідж компанії,
+          то <strong>діджитал-маркетинг</strong> є найбільш влучним </h2>
+        <h6 class="quote__author">- Маргарита Акулич</h6>
+      </div>
+      <div class="quote">
+        <h2 class="quote__text"> Якщо треба створити або підняти імідж компанії,
+          то <strong>діджитал-маркетинг</strong> є найбільш влучним </h2>
+        <h6 class="quote__author">- Маргарита Акулич</h6>
+      </div>
     </div>
-    <div class="pagination">
-      <img src="images/Oval1Blue.png" alt="Перша сторінка">
-      <img src="images/Oval2Blue.png" alt="Друга сторінка">
-      <img src="images/Oval3Blue.png" alt="Третя сторінка">
+    <div class="pagination-blue">
+      <img src="images/Oval2Blue.png" alt="Перша сторінка">
+      <img src="images/Oval1Blue.png" alt="Друга сторінка">
+      <img src="images/Oval1Blue.png" alt="Третя сторінка">
     </div>
   </section>
 </main>
@@ -398,7 +410,7 @@
 
 <script>
     $(function () {
-        var $carousel = $('.owl-carousel');
+        var $carousel = $('.owl-carousel-general');
 
         $carousel.owlCarousel({
             items: 1,
@@ -412,7 +424,7 @@
             autoplayHoverPause: true
         });
 
-        var $dots = $('.pagination img');
+        var $dots = $('.pagination-white img');
 
         function updateDots(index) {
             $dots.each(function (i) {
@@ -443,6 +455,43 @@
         });
 
         updateDots(0, $carousel.find('.owl-item').not('.cloned').length);
+    });
+</script>
+<script>
+    $(function () {
+        var $carousel_quote = $('.owl-carousel-quote');
+
+        $carousel_quote.owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            dots: false,
+            nav: false
+        });
+
+        var $dots_quote = $('.pagination-blue img');
+
+        function updateDotsBlue(index) {
+            $dots_quote.each(function (i) {
+                var src = (i === index) ? 'images/Oval2Blue.png' : 'images/Oval1Blue.png';
+                $(this).attr('src', src);
+            });
+        }
+
+        $carousel_quote.on('changed.owl.carousel', function (event) {
+            var count = event.item.count;
+            var current = (event.item.index - event.relatedTarget._clones.length / 2);
+            current = (current % count + count) % count;
+            updateDotsBlue(current);
+        });
+
+        $dots_quote.on('click', function () {
+            var idx = $(this).index();
+            $carousel_quote.trigger('to.owl.carousel', [idx, 300]);
+        });
+
+        updateDotsBlue(0, $carousel_quote.find('.owl-item').not('.cloned').length);
     });
 </script>
 </body>
