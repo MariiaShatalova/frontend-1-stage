@@ -12,8 +12,13 @@
   <meta property="og:url" content="https://mariiashatalova.github.io/frontend-1-stage/html_css-basics/"/>
   <meta property="og:image"
         content="https://mariiashatalova.github.io/frontend-1-stage/html_css-basics/images/bg-img.jpg"/>
-  <meta property="og:description" content="Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу, продажах та управленні"/>
+  <meta property="og:description"
+        content="Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу, продажах та управленні"/>
   <meta property="og:site_name" content="Діджитал агенція повного циклу"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -45,17 +50,33 @@
       </button>
     </div>
 
-    <div class="general-content">
-      <h1>Мисли глобально</h1>
-      <hr class="hr-main">
-      <p>Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу,
-        продажах та управленні</p>
-      <a class="btn-read-more" href="#">Детальніше</a>
+    <div class="owl-carousel">
+      <div class="general-content">
+        <h1>Мисли глобально</h1>
+        <hr class="hr-main">
+        <p>Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу,
+          продажах та управленні</p>
+        <a class="btn-read-more" href="#">Детальніше</a>
+      </div>
+      <div class="general-content">
+        <h1>Мисли глобально</h1>
+        <hr class="hr-main">
+        <p>Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу,
+          продажах та управленні</p>
+        <a class="btn-read-more" href="#">Детальніше</a>
+      </div>
+      <div class="general-content">
+        <h1>Мисли глобально</h1>
+        <hr class="hr-main">
+        <p>Di Gі — це діджитал агенція повного циклу, спрямована на найкращий результат наших клієнтів в маркетингу,
+          продажах та управленні</p>
+        <a class="btn-read-more" href="#">Детальніше</a>
+      </div>
     </div>
 
     <div class="pagination">
-      <img src="images/Oval%201.svg" alt="Перша сторінка">
-      <img src="images/Oval%202.svg" alt="Друга сторінка">
+      <img src="images/Oval%202.svg" alt="Перша сторінка">
+      <img src="images/Oval%201.svg" alt="Друга сторінка">
       <img src="images/Oval%201.svg" alt="Третя сторінка">
     </div>
   </section>
@@ -372,8 +393,57 @@
   </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<script>
+    $(function () {
+        var $carousel = $('.owl-carousel');
+
+        $carousel.owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            dots: false,
+            nav: false,
+            mouseDrag: false,
+            touchDrag: false,
+            autoplayHoverPause: true
+        });
+
+        var $dots = $('.pagination img');
+
+        function updateDots(index) {
+            $dots.each(function (i) {
+                var src = (i === index) ? 'images/Oval%202.svg' : 'images/Oval%201.svg';
+                $(this).attr('src', src);
+            });
+        }
+
+        $carousel.on('changed.owl.carousel', function (event) {
+            var count = event.item.count;
+            var current = (event.item.index - event.relatedTarget._clones.length / 2);
+            current = (current % count + count) % count;
+            updateDots(current);
+        });
+
+        $dots.on('click', function () {
+            var idx = $(this).index();
+            $carousel.trigger('to.owl.carousel', [idx, 300]);
+        });
+
+        $('.btn-arrow__forward').off('click').on('click', function (e) {
+            e.preventDefault();
+            $carousel.trigger('next.owl.carousel');
+        });
+        $('.btn-arrow__back').off('click').on('click', function (e) {
+            e.preventDefault();
+            $carousel.trigger('prev.owl.carousel');
+        });
+
+        updateDots(0, $carousel.find('.owl-item').not('.cloned').length);
+    });
+</script>
 </body>
 </html>
