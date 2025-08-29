@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Js-basics</title>
+  <meta property="og:type" content="website"/>
+  <link rel="stylesheet" href="/normalize-css/reset.css">
+  <link rel="stylesheet" href="/normalize-css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="main">
+  <div id="info-box" class="info-box"></div>
+
+  <section class="task column">
+    <h2>Завдання 1</h2>
+    <div id="main-square" class="black-square"></div>
+    <button type="button" id="css-type" class="btn">CSS (display: none)</button>
+    <button type="button" id="js-type-remove" class="btn">JS (видалення елементу)</button>
+    <button type="button" id="css+js-type" class="btn">CSS+JS</button>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 2</h2>
+    <button type="button" id="toggle-type" class="btn">toggle</button>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 3</h2>
+    <div id="squares-task3">
+      <div class="row">
+        <div class="black-square"></div>
+        <div class="black-square"></div>
+        <div class="black-square"></div>
+        <div class="black-square"></div>
+        <div class="black-square"></div>
+      </div>
+    </div>
+    <button type="button" id="toggle-task3" class="btn">toggle</button>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 4</h2>
+    <input id="selectorInput" type="text" placeholder=".red, #id, div"/>
+    <button id="toggleBtn">Приховати/показати</button>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 5</h2>
+    <div id="yellow-square-task5" class="yellow-square"></div>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 6</h2>
+    <div class="row">
+      <div id="red-square-task6" class="red-square"></div>
+      <button id="hoverBtn">Показати/приховати</button>
+    </div>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 7</h2>
+    <div class="row">
+      <input id="task7-input" type="text" placeholder="Введіть текст...">
+      <div id="green-square-task7" class="green-square"></div>
+    </div>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 8</h2>
+    <div class="row">
+      <input id="task8-img-link" type="text" placeholder="Введіть текст...">
+      <button id="task8-show-btn">Показати картинку</button>
+    </div>
+    <div id="task8-result"></div>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 9</h2>
+    <div class="row">
+      <textarea id="task9-img-links" rows="5" cols="40"
+                placeholder="Введіть посилання на картинки, кожне з нового рядка"></textarea>
+      <button id="task9-show-btn">Показати картинки</button>
+    </div>
+    <div id="task9-result"></div>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 13</h2>
+    <div contenteditable="true" id="block1" style="border:1px solid black; padding:10px; margin:5px;">
+      Тут текст зберігається в localStorage
+    </div>
+
+    <div contenteditable="true" id="block2" style="border:1px solid black; padding:10px; margin:5px;">
+      Тут текст зберігається в cookies
+    </div>
+
+    <div contenteditable="true" id="block3" style="border:1px solid black; padding:10px; margin:5px;">
+      Тут текст зберігається в sessionStorage
+    </div>
+    <hr>
+  </section>
+
+  <button id="scrollTopBtn">Нагору</button>
+
+  <section class="task">
+    <h2>Завдання 15</h2>
+    <div id="outer">
+      <div id="inner"></div>
+    </div>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 16</h2>
+    <button id="showOverlay">Показати квадрат</button>
+    <div id="overlay"></div>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 17</h2>
+    <form id="myForm">
+      <input type="submit" value="GO">
+    </form>
+    <hr>
+  </section>
+
+  <section class="task">
+    <h2>Завдання 18</h2>
+    <label class="upload-area" id="uploadArea">
+      <span>Перетягни файл сюди<br>або натисни, щоб вибрати</span>
+      <input type="file" id="fileInput">
+      <p id="fileInfo">Файл не вибрано</p>
+    </label>
+    <hr>
+  </section>
+</main>
+
+<script src="js/task1_1+2.js"></script>
+<script src="js/task1_3.js"></script>
+<script src="js/task1_4.js"></script>
+<script src="js/task1_5.js"></script>
+<script src="js/task1_6.js"></script>
+<script src="js/task1_7.js"></script>
+<script src="js/task1_8.js"></script>
+<script src="js/task1_9.js"></script>
+<script src="js/task1_10+11+12.js"></script>
+<script src="js/task1_13.js"></script>
+<script src="js/task1_14.js"></script>
+<script src="js/task1_15.js"></script>
+<script src="js/task1_16.js"></script>
+<script src="js/task1_17.js"></script>
+<script src="js/task1_18.js"></script>
+</body>
+</html>
